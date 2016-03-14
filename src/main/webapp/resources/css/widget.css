@@ -1,0 +1,60 @@
+#widgetWrapper {
+	width: 450px;
+	height: 500px;
+	margin: 10px;
+}
+
+.widget-container {
+	width: 100%;
+	height: 100%;
+	border: 1px solid #ccc;
+}
+
+.widget-left-panel {
+	width: 5%;
+	height: 100%;
+	min-width: 25px;
+	display: inline-block;
+	float: left;
+	background: #ccc;
+	opacity: 0.7;
+}
+
+.widget-right-panel {
+	width: 94%;
+	display: inline-block;
+}
+
+.widget-content {
+	width: 100%;
+	height: 90%;
+	padding: 5px;
+}
+
+.widget-dialog-container {
+	width: 100%;
+	height: 84%;
+}
+
+.widget-message-container {
+	width: 100%;
+	height: 15%;
+	border: 1px solid #ccc;
+}
+
+.widget-header, 
+.widget-footer {
+	width: 100%;
+	height: 4%;
+	min-height: 25px;
+	background: grey;
+}
+
+.widget-text-simple {
+	padding: 3px 5px;
+	font: normal 1.2em Serif;
+}
+
+.text-white {
+	color: white;
+}

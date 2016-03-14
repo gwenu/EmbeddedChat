@@ -7,12 +7,12 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 public class WidgetController {
 	
-	private static final String WIDGET_INIT = "widget_init";
+	private static final String WIDGET_VIEW = "widget";
 	
 	@RequestMapping("/widget/init")
 	public ModelAndView initWidget() {
 		ModelAndView model = new ModelAndView();
-    	model.setViewName(WIDGET_INIT);
+    	model.setViewName(WIDGET_VIEW);
     	
 		return model;
 	}

@@ -1,1 +1,0 @@
-<h2>Embedded chat -> Welcome from Widget</h2>

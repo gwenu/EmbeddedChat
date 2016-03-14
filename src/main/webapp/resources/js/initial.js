@@ -50,7 +50,7 @@
 	    		  method: "GET",
 	    		  url: "/widget/init", 
 	    		  success: function(response) { 
-	    		  	  $("#widget_container").append(response);
+	    		  	  $("#widgetWrapper").append(response);
 	    	      }
 	    	});
 		 });
