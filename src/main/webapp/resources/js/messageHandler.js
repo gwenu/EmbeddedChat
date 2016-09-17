@@ -12,7 +12,7 @@ function connect() {
         setConnected(true);
         console.log('Connected: ' + frame);
         stompClient.subscribe('/chat/endpoint', function(message){
-        	sendMessage(JSON.parse(message.body).content);
+        	showMessage(JSON.parse(message.body));
         });
     });
 }
@@ -22,7 +22,7 @@ function disconnect() {
         stompClient.disconnect();
     }
     setConnected(false);
-    console.log("Disconnected");
+    console.log("Disconnected!");
 }
 
 function sendMessage() {
@@ -32,11 +32,16 @@ function sendMessage() {
 	return message;
 }
 
-
-function showMessage() {
-	var message = sendMessage();
+function showMessage(message) {
 	var messageContainer = $(".widget-dialog-container");
+	messageContainer.append(composeDialogItem(message));
+}
 
-	$(".widget-dialog-container").append("<div class='widget-dilog-name col-md-3 text-muted'><strong>Name:</strong></div> " +
-			"<div class='widget-dilog-message col-md-9 text-muted'>" + message + "</div");
+function composeDialogItem(message) {
+	return createDivWithClass("widget-dilog-name col-md-3 text-muted", "<strong>" + message.sender + "</strong></div>") + 
+	createDivWithClass("widget-dilog-message col-md-9 text-muted", message.message);
+}
+
+function createDivWithClass(divClass, divContent) {
+	return "<div class='" + divClass + "'>" + divContent + "</div>";
 }

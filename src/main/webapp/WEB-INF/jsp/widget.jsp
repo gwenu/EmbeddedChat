@@ -13,7 +13,7 @@
 						<textarea class="widget-message-textarea form-control" rows="2"></textarea>
 					</div>
 					<div class="widget-message-btn">
-						<button type="button" id="sendBtn" class="btn btn-success" onclick=showMessage()>Send</button>
+						<button type="button" id="sendBtn" class="btn btn-success" onclick=sendMessage()>Send</button>
 					</div>
 				</div>
 			</div>

@@ -14,7 +14,6 @@ public class ChatEndpoint {
 	@MessageMapping("/message")
     @SendTo("/chat/endpoint")
     public Message greeting(Message message) throws Exception {
-        Thread.sleep(3000); // simulated delay
-        return new Message("Sender", "Receiver", new Date(), "New Message");
+        return new Message("Sender", message.getReceiver(), new Date(), message.getMessage());
     }
 }
