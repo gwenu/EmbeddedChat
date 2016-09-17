@@ -42,6 +42,28 @@
 	border: 1px solid #ccc;
 }
 
+.widget-message-text {
+	float: left;
+	width: 80%;
+	height: 95%;
+}
+
+.widget-message-btn {
+	float: left;
+	width: 18%;
+	text-align: center;
+}
+
+#sendBtn {
+	margin: 10% 0;
+}
+
+.widget-message-textarea {
+	float: left;
+	width: 100%;
+	height: 100%;
+}
+
 .widget-header, 
 .widget-footer {
 	width: 100%;
@@ -57,4 +79,8 @@
 
 .text-white {
 	color: white;
+}
+
+.web-socket-controls {
+	margin: 10px;
 }
