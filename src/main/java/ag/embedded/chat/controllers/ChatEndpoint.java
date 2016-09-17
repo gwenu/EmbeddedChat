@@ -1,4 +1,4 @@
-package ag.embedded.chat.config;
+package ag.embedded.chat.controllers;
 
 import java.util.Date;
 
