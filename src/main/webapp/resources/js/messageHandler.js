@@ -1,4 +1,6 @@
 var stompClient = null;
+var sender = null;
+var receiver = null;
 
 function setConnected(connected) {
     document.getElementById('connect').disabled = connected;
@@ -15,6 +17,8 @@ function connect() {
         	showMessage(JSON.parse(message.body));
         });
     });
+    
+    registerActors();
 }
 
 function disconnect() {
@@ -27,7 +31,9 @@ function disconnect() {
 
 function sendMessage() {
 	var message = $(".widget-message-textarea").val();
-	stompClient.send("/app/message", {}, JSON.stringify({ 'name': 'default', 'message': message }));
+	stompClient.send("/app/message", {}, JSON.stringify({ 'sender': sender, 
+														  'receiver': receiver, 
+														  'message': message }));
 	
 	return message;
 }
@@ -44,4 +50,9 @@ function composeDialogItem(message) {
 
 function createDivWithClass(divClass, divContent) {
 	return "<div class='" + divClass + "'>" + divContent + "</div>";
+}
+
+function registerActors() {
+	sender = $(".sender").val()
+	receiver = $(".receiver").val();
 }

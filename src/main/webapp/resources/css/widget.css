@@ -92,6 +92,7 @@
 	color: white;
 }
 
-.web-socket-controls {
+.web-socket-controls,
+.web-socket-tmp-container {
 	margin: 10px;
 }

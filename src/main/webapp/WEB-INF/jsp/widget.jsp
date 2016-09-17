@@ -25,9 +25,18 @@
 	</div>
 </div>
 
-<div class="web-socket-controls">
-	<button id="connect" onclick="connect();">Connect</button>
-	<button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+<div class="web-socket-tmp-container">
+	<div class="web-socket-dialog-actors">
+		<label for="sender">Sender</label>
+		<input type="text" class="sender form-control">
+		
+		<label for="receiver">Receiver</label>	
+		<input type="text" class="receiver form-control">
+	</div>
+	<div class="web-socket-controls">
+		<button id="connect" onclick="connect();">Connect</button>
+		<button id="disconnect" disabled="disabled" onclick="disconnect();">Disconnect</button>
+	</div>
 </div>
 
 <script src="/resources/js/messageHandler.js"></script>
