@@ -37,5 +37,6 @@ function showMessage() {
 	var message = sendMessage();
 	var messageContainer = $(".widget-dialog-container");
 
-	$(".widget-dialog-container").append("<div class='widget-text-simple'>" + message + "</div");
+	$(".widget-dialog-container").append("<div class='widget-dilog-name col-md-3 text-muted'><strong>Name:</strong></div> " +
+			"<div class='widget-dilog-message col-md-9 text-muted'>" + message + "</div");
 }

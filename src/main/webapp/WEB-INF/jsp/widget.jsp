@@ -9,11 +9,11 @@
 			<div class="widget-content-wrapper">
 				<div class="widget-dialog-container"></div>
 				<div class="widget-message-container">
-					<div class="widget-message-text">
-						<textarea class="widget-message-textarea"></textarea>
+					<div class="widget-message-text has-success">
+						<textarea class="widget-message-textarea form-control" rows="2"></textarea>
 					</div>
 					<div class="widget-message-btn">
-						<button id="sendBtn" onclick=showMessage()>Send</button>
+						<button type="button" id="sendBtn" class="btn btn-success" onclick=showMessage()>Send</button>
 					</div>
 				</div>
 			</div>
