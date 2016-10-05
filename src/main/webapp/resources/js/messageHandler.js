@@ -32,7 +32,7 @@ function disconnect() {
 function sendMessage() {
 	var message = $(".widget-message-textarea").val();
 	stompClient.send("/app/message", {}, JSON.stringify({ 'sender': sender, 
-														  'receiver': receiver, 
+														  'chatRoomId': chatRoomId, 
 														  'message': message }));
 	
 	return message;
@@ -55,4 +55,14 @@ function createDivWithClass(divClass, divContent) {
 function registerActors() {
 	sender = $(".sender").val()
 	receiver = $(".receiver").val();
+	chatRoomId = registerChatRoom();
+}
+
+function registerChatRoom() {
+	return $.ajax({
+        type: "POST",
+        url: '/chatroom/register',
+        data: { sender: $(".sender").val(), receiver: $(".receiver").val() },
+        async: false
+    }).responseText;
 }

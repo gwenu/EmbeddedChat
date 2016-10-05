@@ -14,6 +14,6 @@ public class ChatEndpoint {
 	@MessageMapping("/message")
     @SendTo("/chat/endpoint")
     public Message greeting(Message message) throws Exception {
-        return new Message(message.getSender(), message.getReceiver(), new Date(), message.getMessage());
+        return new Message(message.getSender(), message.getChatRoomId(), new Date(), message.getMessage());
     }
 }
