@@ -5,6 +5,7 @@ import java.util.Date;
 public class Message {
 
 	private String sender;
+	private String receiver;
 	private Long chatRoomId;
 	private Date date;
 	private String message;
@@ -24,6 +25,14 @@ public class Message {
 
 	public void setSender(String sender) {
 		this.sender = sender;
+	}
+	
+	public String getReceiver() {
+		return receiver;
+	}
+
+	public void setReceiver(String receiver) {
+		this.receiver = receiver;
 	}
 
 	public Long getChatRoomId() {

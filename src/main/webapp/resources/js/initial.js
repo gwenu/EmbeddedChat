@@ -17,6 +17,8 @@
 	    // The jQuery version on the window is the one we want to use
 	    jQuery = window.jQuery;
 	    main();
+	    
+	    console.log("!!!!!!");
 	};
 	
 	function createScriptTag(source) {
